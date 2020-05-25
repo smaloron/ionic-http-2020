@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Login</ion-label>
+      <ion-input type="text" [(ngModel)]="credentials.login"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Mot de passe</ion-label>
+      <ion-input type="password" [(ngModel)]="credentials.password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" (click)="validate()">
+    Connexion
+  </ion-button>
+</ion-content>

@@ -1,36 +1,46 @@
 {
   "users": [
     {
-      "id": 1,
-      "userName": "Sophie"
+      "userName": "a",
+      "login": "a",
+      "role": "user",
+      "password": "",
+      "id": 1
     },
     {
-      "id": 2,
-      "userName": "Jean"
+      "userName": "toto",
+      "login": "toto",
+      "role": "user",
+      "password": "123456",
+      "id": 2
     },
     {
-      "id": 3,
-      "userName": "Pauline"
+      "userName": "tata",
+      "login": "tata",
+      "role": "user",
+      "password": "$2a$10$T20kYRIhJWY2UFoDlKuL1.PkMVeRGO9jfidz6omd7P0y..QV0k88y",
+      "id": 3
+    },
+    {
+      "userName": "titi",
+      "login": "titi",
+      "role": "user",
+      "password": "$2a$10$rr.XJj.fvJhoX49nyFhD2.axZHxtt774z8SBCq4NxXQhdvHz53xku",
+      "id": 4
     }
   ],
   "tasks": [
     {
-      "taskName": "Acheter du lait",
-      "done": true,
-      "id": 1,
-      "userId": 1
-    },
-    {
-      "id": 2,
-      "taskName": "Acheter un masque",
+      "taskName": "test",
+      "done": false,
       "userId": 3,
-      "done": true
+      "id": 1
     },
     {
-      "id": 3,
-      "taskName": "Trouver le vaccin pour le Coronavirus",
-      "userId": 2,
-      "done": true
+      "taskName": "test 2",
+      "done": false,
+      "userId": 3,
+      "id": 2
     }
   ]
 }
