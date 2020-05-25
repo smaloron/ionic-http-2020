@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>user-details</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+        <ion-label>
+          <ion-card-title>
+            {{ user.getFullName() }}
+          </ion-card-title>
+          <ion-text color="medium">
+            {{ user.address }} <br />{{ user.zipCode }} {{ user.city }}
+          </ion-text>
+        </ion-label>
+      </ion-item>
+      <ion-avatar slot="start">
+        <ion-img
+          [src]="user.picture"
+          class="ion-padding ion-margin-vertical"
+        ></ion-img>
+      </ion-avatar>
+    </ion-card-header>
+  </ion-card>
+
+  <div id="mapId" style="width: 100%; height: 50%;"></div>
+</ion-content>

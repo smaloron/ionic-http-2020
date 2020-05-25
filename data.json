@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "Sophie"
+    },
+    {
+      "id": 2,
+      "userName": "Jean"
+    },
+    {
+      "id": 3,
+      "userName": "Pauline"
+    }
+  ],
+  "tasks": [
+    {
+      "taskName": "Acheter du lait",
+      "done": true,
+      "id": 1,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "taskName": "Acheter un masque",
+      "userId": 3,
+      "done": true
+    },
+    {
+      "id": 3,
+      "taskName": "Trouver le vaccin pour le Coronavirus",
+      "userId": 2,
+      "done": true
+    }
+  ]
+}
