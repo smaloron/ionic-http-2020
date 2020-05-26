@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ character.name }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-text slot="start">Genre</ion-text>
+      <ion-text slot="end">{{ character.gender }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-text slot="start">Taille</ion-text>
+      <ion-text slot="end">{{ character.height }} cm</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-text slot="start">Masse</ion-text>
+      <ion-text slot="end">{{ character.mass }} kg</ion-text>
+    </ion-item>
+  </ion-list>
+
+  <h3>Homeworld</h3>
+  <ion-list *ngIf="character.homeWorld">
+    <ion-item>
+      <ion-text slot="start">Nom</ion-text>
+      <ion-text slot="end">{{ character.homeWorld.name }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-text slot="start">Climat</ion-text>
+      <ion-text slot="end">{{ character.homeWorld.climate }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-text slot="start">Terrain</ion-text>
+      <ion-text slot="end">{{ character.homeWorld.terrain }}</ion-text>
+    </ion-item>
+  </ion-list>
+
+  <h3>Les films</h3>
+  <ion-list>
+    <ion-item *ngFor="let film of character.films">
+      <ion-label>
+        <h4>{{ film.title }}</h4>
+        <p>{{ film.releaseDate | date: 'd/M/yyyy' }}</p>
+      </ion-label>
+      <ion-chip slot="end">{{ film.episodeNumber }}</ion-chip>
+    </ion-item>
+  </ion-list>
+</ion-content>

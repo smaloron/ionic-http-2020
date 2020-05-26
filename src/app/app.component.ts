@@ -43,6 +43,11 @@ export class AppComponent implements OnInit {
       url: "/task-list",
       icon: "cloud-done",
     },
+    {
+      title: "Liste des perso de Star Wars",
+      url: "/sw-characters-list",
+      icon: "star",
+    },
   ];
 
   private securedRoutes = ["/task-list"];

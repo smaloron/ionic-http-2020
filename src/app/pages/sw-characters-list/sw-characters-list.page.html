@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>sw-characters-list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item
+      *ngFor="let item of characterList"
+      routerLink="/sw-character-details/{{ item.id }}"
+    >
+      <ion-label>{{ item.name }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row class="align-item-center justify-content-between">
+        <ion-col class="text-left">
+          <ion-button (click)="goPrevious()" *ngIf="swService.hasPrevious()">
+            <ion-icon name="chevron-back" slot="icon-only"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+        <ion-col class="text-center">
+          <ion-label>
+            page {{ swService.getPageNumber() }} sur {{
+            swService.getTotalPages() }}
+          </ion-label>
+        </ion-col>
+
+        <ion-col class="text-right">
+          <ion-button (click)="goNext()" *ngIf="swService.hasNext()">
+            <ion-icon name="chevron-forward" slot="icon-only"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
