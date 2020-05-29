@@ -7,4 +7,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content class="ion-padding">
+  <app-person [user]="user" (onClick)="appPersonClick($event)"></app-person>
+
+  <app-list [data]="fruits" [(itemSelection)]="selectedFruitIndex"></app-list>
+
+  <p>{{ selectedFruitIndex }}</p>
+</ion-content>
